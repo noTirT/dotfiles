@@ -30,6 +30,7 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
+				"yamlfmt",
 			},
 		})
 	end,

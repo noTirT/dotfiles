@@ -15,7 +15,7 @@ return {
 					json = { "prettier" },
 					html = { "prettier" },
 					markdown = { "prettier" },
-					yaml = { "prettier" },
+					yaml = { "yamlfmt" },
 					["*"] = { "trim_whitespace" },
 				},
 				format_on_save = {
