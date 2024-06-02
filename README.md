@@ -1,7 +1,7 @@
 # My Dotfiles
 
 This repo contains the dotfiles I use on my Linux systems
-Following the video here https://www.youtube.com/watch?v=y6XCebnB9gs
+Following the video [here](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
 ## Requirements
 
