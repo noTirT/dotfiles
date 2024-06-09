@@ -32,3 +32,7 @@ Follow install instructions [here](https://github.com/adi1090x/rofi) (recommende
 Used settings for launcher:
 
 - Type 1 -> Style 5 -> Color Nord
+
+## TODO
+
+- Add scripts for rofi stuff to the repo but dont stash them so that one can include it in the rofi theme repo once installed

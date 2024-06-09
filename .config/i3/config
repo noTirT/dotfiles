@@ -187,7 +187,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+BackSpace mode "$mode_system"
+# bindsym $mod+BackSpace mode "$mode_system"
+bindsym $mod+BackSpace exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 set $scrot_system Take Screenshot of (Print) all screens, ($mod+Print) focused window, (Shift+Print) selection
 
@@ -222,7 +223,7 @@ bar {
 }
 
 # Set background image on startup
-exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always feh --bg-fill ~/Pictures/coding_wallpaper_3.jpg
 
 # Set gaps for multiple window tiles
 gaps inner 15px
@@ -246,7 +247,7 @@ bindsym $mod+Down move container to output down
 bindsym $mod+Up move container to output up
 
 # Put firefox containers onto workspace 2 by default
-assign [class="^firefox$"] $ws2
+# assign [class="^firefox$"] $ws2
 
 # TODO : adjust color scheme to status bar
 # TODO : only enable multiple monitors if there are multiple connected
