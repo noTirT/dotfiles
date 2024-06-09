@@ -27,3 +27,5 @@ Then use GNU stow to create symlinks
 $ stow --adopt .
 $ git restore .
 ```
+
+This replaces the standard configurations in the rofi directory
