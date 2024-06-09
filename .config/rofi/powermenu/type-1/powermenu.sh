@@ -73,8 +73,7 @@ run_cmd() {
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
-            sh ~/.config/i3/scripts/lock.sh 2>/dev/null
-			systemctl suspend
+            sh ~/.config/i3/scripts/lock.sh suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
