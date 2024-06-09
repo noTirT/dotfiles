@@ -19,20 +19,11 @@ $ git clone git@github.com:noTirT/dotfiles.git
 $ cd dotfiles
 ```
 
+Follow rofi install instructions [here](https://github.com/adi1090x/rofi) (recommended installation location is `/opt`)
+
 Then use GNU stow to create symlinks
 
 ```
-$ stow .
+$ stow --adopt .
+$ git restore .
 ```
-
-## Rofi launcher
-
-Follow install instructions [here](https://github.com/adi1090x/rofi) (recommended installation location is `/opt`)
-
-Used settings for launcher:
-
-- Type 1 -> Style 5 -> Color Nord
-
-## TODO
-
-- Add scripts for rofi stuff to the repo but dont stash them so that one can include it in the rofi theme repo once installed
