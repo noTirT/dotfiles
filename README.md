@@ -29,3 +29,11 @@ $ git restore .
 ```
 
 This replaces the standard configurations in the rofi directory
+
+## Misc
+
+You can use following command to find all user-installed apt-packages
+
+```
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
+```
