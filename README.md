@@ -5,10 +5,13 @@ Following the video [here](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
 ## Requirements
 
-Ensure you have the following installed:
+Install all the required apt packages
 
-- git
-- stow
+```
+sudo apt-get update
+sudo dpkg --set-selections < required_apt_packages.txt
+sudo apt-get -u dselect-upgrade
+```
 
 ## Installation
 
@@ -29,11 +32,3 @@ $ git restore .
 ```
 
 This replaces the standard configurations in the rofi directory
-
-Install all the required apt packages
-
-```
-sudo apt-get update
-sudo dpkg --set-selections < required_apt_packages.txt
-sudo apt-get -u dselect-upgrade
-```

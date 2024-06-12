@@ -230,8 +230,8 @@ exec_always --no-startup-id srandrd ~/.config/i3/scripts/configure_screens.sh $w
 
 # Set gaps for multiple window tiles
 gaps inner 15px
-workspace $ws2 gaps inner 0
-workspace $ws2 gaps outer 0
+workspace $ws2 gaps inner 2px
+workspace $ws2 gaps outer 2px
 smart_gaps on
 
 # Place workspace on secondary screen by default
