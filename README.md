@@ -18,7 +18,7 @@ sudo apt-get -u dselect-upgrade
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com:noTirT/dotfiles.git
+$ git clone https://github.com/noTirT/dotfiles.git
 $ cd dotfiles
 ```
 
