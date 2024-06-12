@@ -195,7 +195,7 @@ set $scrot_system Take Screenshot of (Print) all screens, ($mod+Print) focused w
 mode "$scrot_system" {
     bindsym Print exec scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved", mode "default"
     bindsym $mod+Print exec scrot -u ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved", mode "default"
-    bindsym --release Shift+Print exec scrot -f -l style=dash -s ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved", mode "default"
+    bindsym --release Shift+Print exec scrot -f -l style=dash -s ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -t image/png $f'&& notify-send "Screenshot saved and copied to clipboard", mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -203,7 +203,7 @@ mode "$scrot_system" {
 
 bindsym Print mode "$scrot_system"
 
-default_border none
+set $active_border_color #B58900
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -216,7 +216,7 @@ bar {
         position top
         strip_workspace_numbers yes
         colors {
-            focused_workspace #B58900 #B58900 #002B36
+            focused_workspace $active_border_color $active_border_color #002B36
             active_workspace  #586E75 #586E75  #EEE8D5
             inactive_workspace  #002B36 #002B36  #8A9A9A
         }
@@ -225,18 +225,21 @@ bar {
 # Set background image on startup
 exec_always feh --bg-fill ~/Pictures/coding_wallpaper_3.jpg
 
+# Auto configure plugged in screens
+exec_always --no-startup-id srandrd ~/.config/i3/scripts/configure_screens.sh $ws2
+
 # Set gaps for multiple window tiles
 gaps inner 15px
 workspace $ws2 gaps inner 0
 workspace $ws2 gaps outer 0
 smart_gaps on
 
+# Place workspace on secondary screen by default
+workspace $ws2 output HDMI-A-0 eDP
+
 # Open firefox on workspace 2 and terminal on workspace 1
 exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
-
-# Bind workspace 2 to nonprimary output if available
-exec --no-startup-id i3-msg 'workspace $ws2 output nonprimary primary'
 
 # Move workspaces across screens
 bindsym $mod+Shift+Down move workspace to output down
@@ -246,14 +249,20 @@ bindsym $mod+Shift+Up move workspace to output up
 bindsym $mod+Down move container to output down
 bindsym $mod+Up move container to output up
 
-# Put firefox containers onto workspace 2 by default
-# assign [class="^firefox$"] $ws2
-
-# TODO : adjust color scheme to status bar
-# TODO : only enable multiple monitors if there are multiple connected
-# TODO : power modes management
-# TODO : mode for taking screenshots (add option to paste to clipboard)
-
 # Control screen brightness with keyboard
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+# Set default border to 2 pixels without a title bar
+default_border pixel 2
+# Hide border when window is the only on in workspace
+hide_edge_borders smart
+
+set $transp       #00000000
+
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   $active_border_color
+client.focused_inactive #333333 #5f676a #ffffff #484e50   $transp
+client.unfocused        #333333 #222222 #888888 #292d2e   $transp
+client.urgent           #2f343a #900000 #ffffff #900000   $transp
+
+client.background       $transp
