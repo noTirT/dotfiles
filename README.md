@@ -37,11 +37,3 @@ sudo apt-get update
 sudo dpkg --set-selections < required_apt_packages.txt
 sudo apt-get -u dselect-upgrade
 ```
-
-## Misc
-
-You can use following command to find all user-installed apt-packages
-
-```
-comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
-```
