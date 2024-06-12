@@ -18,8 +18,8 @@ sudo apt-get -u dselect-upgrade
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone https://github.com/noTirT/dotfiles.git
-$ cd dotfiles
+git clone https://github.com/noTirT/dotfiles.git
+cd dotfiles
 ```
 
 Follow rofi install instructions [here](https://github.com/adi1090x/rofi) (recommended installation location is `/opt`)
@@ -27,8 +27,8 @@ Follow rofi install instructions [here](https://github.com/adi1090x/rofi) (recom
 Then use GNU stow to create symlinks
 
 ```
-$ stow --adopt .
-$ git restore .
+stow --adopt .
+git restore .
 ```
 
 This replaces the standard configurations in the rofi directory
