@@ -30,6 +30,13 @@ $ git restore .
 
 This replaces the standard configurations in the rofi directory
 
+Install all the required apt packages
+
+```
+chmod +x install_packages.sh
+./install_packages
+```
+
 ## Misc
 
 You can use following command to find all user-installed apt-packages
