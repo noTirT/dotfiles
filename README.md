@@ -33,8 +33,9 @@ This replaces the standard configurations in the rofi directory
 Install all the required apt packages
 
 ```
-chmod +x install_packages.sh
-./install_packages
+sudo apt-get update
+sudo dpkg --set-selections < required_apt_packages.txt
+sudo apt-get -u dselect-upgrade
 ```
 
 ## Misc
