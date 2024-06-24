@@ -1710,6 +1710,7 @@ libxdamage1:i386				install
 libxdmcp-dev:amd64				install
 libxdmcp6:amd64					install
 libxdmcp6:i386					install
+libxdo3:amd64					install
 libxext-dev:amd64				install
 libxext6:amd64					install
 libxext6:i386					install
@@ -1778,11 +1779,11 @@ linux-firmware					install
 linux-generic-hwe-22.04				install
 linux-headers-5.15.0-43				install
 linux-headers-5.15.0-43-generic			install
-linux-headers-6.5.0-28-generic			install
 linux-headers-6.5.0-35-generic			install
+linux-headers-6.5.0-41-generic			install
 linux-headers-generic-hwe-22.04			install
-linux-hwe-6.5-headers-6.5.0-28			install
 linux-hwe-6.5-headers-6.5.0-35			install
+linux-hwe-6.5-headers-6.5.0-41			install
 linux-image-5.15.0-43-generic			deinstall
 linux-image-5.15.0-53-generic			deinstall
 linux-image-5.15.0-56-generic			deinstall
@@ -1812,8 +1813,9 @@ linux-image-6.5.0-21-generic			deinstall
 linux-image-6.5.0-25-generic			deinstall
 linux-image-6.5.0-26-generic			deinstall
 linux-image-6.5.0-27-generic			deinstall
-linux-image-6.5.0-28-generic			install
+linux-image-6.5.0-28-generic			deinstall
 linux-image-6.5.0-35-generic			install
+linux-image-6.5.0-41-generic			install
 linux-image-generic-hwe-22.04			install
 linux-libc-dev:amd64				install
 linux-modules-5.15.0-43-generic			deinstall
@@ -1845,8 +1847,9 @@ linux-modules-6.5.0-21-generic			deinstall
 linux-modules-6.5.0-25-generic			deinstall
 linux-modules-6.5.0-26-generic			deinstall
 linux-modules-6.5.0-27-generic			deinstall
-linux-modules-6.5.0-28-generic			install
+linux-modules-6.5.0-28-generic			deinstall
 linux-modules-6.5.0-35-generic			install
+linux-modules-6.5.0-41-generic			install
 linux-modules-extra-5.15.0-43-generic		deinstall
 linux-modules-extra-5.15.0-53-generic		deinstall
 linux-modules-extra-5.15.0-56-generic		deinstall
@@ -1876,8 +1879,9 @@ linux-modules-extra-6.5.0-21-generic		deinstall
 linux-modules-extra-6.5.0-25-generic		deinstall
 linux-modules-extra-6.5.0-26-generic		deinstall
 linux-modules-extra-6.5.0-27-generic		deinstall
-linux-modules-extra-6.5.0-28-generic		install
+linux-modules-extra-6.5.0-28-generic		deinstall
 linux-modules-extra-6.5.0-35-generic		install
+linux-modules-extra-6.5.0-41-generic		install
 linux-sound-base				install
 lmodern						install
 locales						install
@@ -2349,6 +2353,7 @@ xdg-desktop-portal-gtk				install
 xdg-user-dirs					install
 xdg-user-dirs-gtk				install
 xdg-utils					install
+xdotool						install
 xfonts-base					install
 xfonts-encodings				install
 xfonts-scalable					install

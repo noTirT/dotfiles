@@ -226,7 +226,7 @@ bar {
 exec_always feh --bg-fill ~/Pictures/coding_wallpaper_3.jpg
 
 # Auto configure plugged in screens
-exec_always --no-startup-id srandrd ~/.config/i3/scripts/configure_screens.sh $ws2
+exec_always --no-startup-id srandrd ~/.config/i3/scripts/configure_screens.sh
 
 # Set gaps for multiple window tiles
 gaps inner 15px
@@ -240,6 +240,9 @@ workspace $ws2 output HDMI-A-0 eDP
 # Open firefox on workspace 2 and terminal on workspace 1
 exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
+
+# Activate NumPad on startup
+exec --no-startup-id xdotool key --clearmodifiers Num_Lock
 
 # Move workspaces across screens
 bindsym $mod+Shift+Down move workspace to output down
