@@ -17,6 +17,10 @@ fi
 # Source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Shell integrations
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+
 # Add in Powerlevel10k (visual of the actual input part of the terminal)
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -62,6 +66,3 @@ alias ls="eza --all --color=always --git --no-filesize --icons=always --no-time 
 alias vpn="/opt/cisco/anyconnect/bin/vpn"
 BAT_THEME="Catppuccin Macchiato"
 
-# Shell integrations
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh

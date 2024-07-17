@@ -194,7 +194,7 @@ set $active_border_color #B58900
 # finds out, if available)
 bar {
         status_command ~/.config/i3/bumblebee-status/bumblebee-status \
-        -m datetime battery-upower pasink pasource brightness bluetooth2 \
+        -m datetime battery-upower pasink brightness bluetooth2 \
         -p datetime.format="%d.%m.%Y %H:%M" \
         -p brightness.interval=1 \
         -t solarized-powerline
@@ -238,8 +238,8 @@ bindsym $mod+Down move container to output down
 bindsym $mod+Up move container to output up
 
 # Control screen brightness with keyboard
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 
 # Set default border to 2 pixels without a title bar
 default_border pixel 2

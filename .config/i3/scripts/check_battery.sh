@@ -28,13 +28,13 @@ fi
 
 if [ "$CURRENT_STATE" != "$PREV_STATE" ]; then
     if [ "$CURRENT_STATE" = "HibernatingSoon" ]; then
-        notify-send -u critical "Hibernating soon" "Battery nearly empty ($CAP%).\nHibernating soon unless charger is plugged in."
+        notify-send -u critical -i /usr/share/icons/Adwaita/scalable/status/batter-level-0-symbolic.svg "Hibernating soon" "Battery nearly empty ($CAP%).\nHibernating soon unless charger is plugged in."
     elif [ "$CURRENT_STATE" = "CriticallyLow" ]; then
-        notify-send -u critical "Critically low Battery" "Battery status critically low ($CAP%).\nPlug in the charger."
-    elif [ "$CURRENT_STATE" = "LowBatery" ]; then
-        notify-send -u normal "Low Battery" "Battery status low ($CAP%).\nPlease plug in the charger."
+        notify-send -u critical -i /usr/share/icons/Adwaita/scalable/status/battery-level-10-symbolic.svg "Critically low Battery" "Battery status critically low ($CAP%).\nPlug in the charger."
+    elif [ "$CURRENT_STATE" = "LowBattery" ]; then
+        notify-send -u normal -i /usr/share/icons/Adwaita/scalable/status/battery-level-20-symbolic.svg "Low Battery" "Battery status low ($CAP%).\nPlease plug in the charger."
     elif [ "$CURRENT_STATE" = "BatteryFull" ]; then
-        notify-send -u normal "Battery full" "Battery fully charged ($CAP%).\nPlease unplug charger."
+        notify-send -u normal -i /usr/share/icons/Adwaita/scalable/status/battery-level-100-charged-symbolic.svg "Battery full" "Battery fully charged ($CAP%).\nPlease unplug charger."
     fi
     echo "$CURRENT_STATE" > "$PREV_STATE_FILE"
 fi

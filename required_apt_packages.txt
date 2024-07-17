@@ -838,6 +838,7 @@ libfontconfig1:i386				install
 libfontconfig1-dev:amd64			install
 libfontembed1:amd64				install
 libfontenc1:amd64				install
+libfprint-2-2:amd64				install
 libfprint-2-tod1:amd64				install
 libfreehand-0.1-1				install
 libfreerdp-client2-2:amd64			install
