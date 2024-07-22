@@ -17,7 +17,6 @@ return {
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
-
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",

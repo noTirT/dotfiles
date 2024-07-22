@@ -4,6 +4,11 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			require("conform").setup({
+				formatters = {
+					sql_sleek = {
+						command = "sleek",
+					},
+				},
 				formatters_by_ft = {
 					lua = { "stylua" },
 					go = { "gofmt" },
@@ -16,6 +21,7 @@ return {
 					html = { "prettier" },
 					markdown = { "prettier" },
 					yaml = { "yamlfmt" },
+					sql = { "sql_sleek" },
 					["*"] = { "trim_whitespace" },
 				},
 				format_on_save = {
