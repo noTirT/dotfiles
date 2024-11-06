@@ -28,6 +28,7 @@ apturl						install
 apturl-common					install
 aspell						install
 aspell-en					install
+astyle						install
 at-spi2-core					install
 autoconf					install
 automake					install
@@ -141,6 +142,7 @@ efibootmgr					install
 eject						install
 emacsen-common					install
 enchant-2					install
+ent						install
 eog						install
 espeak-ng-data:amd64				install
 ethtool						install
@@ -465,6 +467,7 @@ hplip						install
 hplip-data					install
 humanity-icon-theme				install
 hunspell-en-us					install
+hwdata						install
 hwinfo						install
 hyphen-en-us					install
 i3						install
@@ -1316,6 +1319,7 @@ libpixman-1-0:i386				install
 libpixman-1-dev:amd64				install
 libpkcs11-helper1:amd64				install
 libplacebo192:amd64				install
+libplayerctl2:amd64				install
 libplist3:amd64					install
 libplymouth5:amd64				install
 libpng-dev:amd64				install
@@ -1400,7 +1404,6 @@ libreoffice-help-common				install
 libreoffice-help-en-us				install
 libreoffice-impress				install
 libreoffice-math				install
-libreoffice-ogltrans				install
 libreoffice-pdfimport				install
 libreoffice-style-breeze			install
 libreoffice-style-colibre			install
@@ -1549,6 +1552,7 @@ libtk8.6:amd64					install
 libtotem-plparser-common			install
 libtotem-plparser18:amd64			install
 libtotem0:amd64					install
+libtraceevent1:amd64				install
 libtracker-sparql-3.0-0:amd64			install
 libtry-tiny-perl				install
 libtsan0:amd64					install
@@ -1789,11 +1793,18 @@ linux-firmware					install
 linux-generic-hwe-22.04				install
 linux-headers-5.15.0-43				install
 linux-headers-5.15.0-43-generic			install
-linux-headers-6.5.0-41-generic			install
 linux-headers-6.5.0-44-generic			install
+linux-headers-6.8.0-45-generic			install
+linux-headers-6.8.0-47-generic			install
+linux-headers-6.8.0-48-generic			install
 linux-headers-generic-hwe-22.04			install
-linux-hwe-6.5-headers-6.5.0-41			install
 linux-hwe-6.5-headers-6.5.0-44			install
+linux-hwe-6.8-headers-6.8.0-45			install
+linux-hwe-6.8-headers-6.8.0-47			install
+linux-hwe-6.8-headers-6.8.0-48			install
+linux-hwe-6.8-tools-6.8.0-45			install
+linux-hwe-6.8-tools-6.8.0-47			install
+linux-hwe-6.8-tools-6.8.0-48			install
 linux-image-5.15.0-43-generic			deinstall
 linux-image-5.15.0-53-generic			deinstall
 linux-image-5.15.0-56-generic			deinstall
@@ -1825,8 +1836,12 @@ linux-image-6.5.0-26-generic			deinstall
 linux-image-6.5.0-27-generic			deinstall
 linux-image-6.5.0-28-generic			deinstall
 linux-image-6.5.0-35-generic			deinstall
-linux-image-6.5.0-41-generic			install
+linux-image-6.5.0-41-generic			deinstall
 linux-image-6.5.0-44-generic			install
+linux-image-6.8.0-40-generic			deinstall
+linux-image-6.8.0-45-generic			install
+linux-image-6.8.0-47-generic			install
+linux-image-6.8.0-48-generic			install
 linux-image-generic-hwe-22.04			install
 linux-libc-dev:amd64				install
 linux-modules-5.15.0-43-generic			deinstall
@@ -1860,8 +1875,12 @@ linux-modules-6.5.0-26-generic			deinstall
 linux-modules-6.5.0-27-generic			deinstall
 linux-modules-6.5.0-28-generic			deinstall
 linux-modules-6.5.0-35-generic			deinstall
-linux-modules-6.5.0-41-generic			install
+linux-modules-6.5.0-41-generic			deinstall
 linux-modules-6.5.0-44-generic			install
+linux-modules-6.8.0-40-generic			deinstall
+linux-modules-6.8.0-45-generic			install
+linux-modules-6.8.0-47-generic			install
+linux-modules-6.8.0-48-generic			install
 linux-modules-extra-5.15.0-43-generic		deinstall
 linux-modules-extra-5.15.0-53-generic		deinstall
 linux-modules-extra-5.15.0-56-generic		deinstall
@@ -1893,9 +1912,17 @@ linux-modules-extra-6.5.0-26-generic		deinstall
 linux-modules-extra-6.5.0-27-generic		deinstall
 linux-modules-extra-6.5.0-28-generic		deinstall
 linux-modules-extra-6.5.0-35-generic		deinstall
-linux-modules-extra-6.5.0-41-generic		install
+linux-modules-extra-6.5.0-41-generic		deinstall
 linux-modules-extra-6.5.0-44-generic		install
+linux-modules-extra-6.8.0-40-generic		deinstall
+linux-modules-extra-6.8.0-45-generic		install
+linux-modules-extra-6.8.0-47-generic		install
+linux-modules-extra-6.8.0-48-generic		install
 linux-sound-base				install
+linux-tools-6.8.0-45-generic			install
+linux-tools-6.8.0-47-generic			install
+linux-tools-6.8.0-48-generic			install
+linux-tools-common				install
 lmodern						install
 locales						install
 login						install
@@ -1933,6 +1960,7 @@ mtr-tiny					install
 mutter-common					install
 mythes-en-us					install
 nano						install
+nasm						install
 nautilus					install
 nautilus-data					install
 nautilus-extension-gnome-terminal		install
@@ -1960,6 +1988,8 @@ nginx-common					install
 nginx-core					install
 ngrok						install
 nodejs						install
+notify-osd					install
+notify-osd-icons				install
 ntfs-3g						install
 ocl-icd-libopencl1:amd64			install
 openjdk-17-jdk:amd64				install
@@ -1995,6 +2025,7 @@ pipewire-bin					install
 pipewire-media-session				install
 pkexec						install
 pkg-config					install
+playerctl					install
 plymouth					install
 plymouth-label					install
 plymouth-theme-spinner				install
@@ -2271,6 +2302,7 @@ tracker-extract					install
 tracker-miner-fs				install
 transmission-common				install
 transmission-gtk				install
+tree						install
 tzdata						install
 ubuntu-advantage-desktop-daemon			install
 ubuntu-advantage-tools				install
@@ -2380,6 +2412,7 @@ xorg						install
 xorg-docs-core					install
 xorg-sgml-doctools				install
 xournalpp					install
+xprintidle					install
 xserver-common					install
 xserver-xephyr					install
 xserver-xorg					install

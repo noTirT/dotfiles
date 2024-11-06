@@ -33,6 +33,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # exec_always --no-startup-id xset +dpms dpms 0 180 300
 # exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/scripts/lock.sh
+exec_always --no-startup-id ~/.config/i3/scripts/handle_sleep_suspend.sh &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -220,11 +221,11 @@ workspace $ws2 gaps outer 2px
 smart_gaps on
 
 # Place workspace on secondary screen by default
-workspace $ws2 output HDMI-A-0 eDP
+# workspace $ws2 output HDMI-A-0 eDP
 
 # Open firefox on workspace 2 and terminal on workspace 1
-exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
+# exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/i3-sensible-terminal'
+# exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
 
 # Activate NumPad on startup
 exec --no-startup-id xdotool key --clearmodifiers Num_Lock

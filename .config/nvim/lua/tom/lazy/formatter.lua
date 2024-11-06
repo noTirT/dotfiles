@@ -22,6 +22,8 @@ return {
 					markdown = { "prettier" },
 					yaml = { "yamlfmt" },
 					sql = { "sql_sleek" },
+					python = { "black" },
+					cpp = { "astyle" },
 					["*"] = { "trim_whitespace" },
 				},
 				format_on_save = {

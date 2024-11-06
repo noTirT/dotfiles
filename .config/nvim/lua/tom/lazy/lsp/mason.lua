@@ -13,7 +13,7 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"tsserver",
+				"ts_ls",
 				"pyright",
 				"eslint",
 				"lua_ls",
@@ -21,6 +21,7 @@ return {
 				"gopls",
 				"texlab",
 				"rust_analyzer",
+				"clangd",
 			},
 			automatic_installation = true,
 		})

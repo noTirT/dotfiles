@@ -15,6 +15,7 @@ return {
 				"query",
 				"rust",
 				"sql",
+				"cpp",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
