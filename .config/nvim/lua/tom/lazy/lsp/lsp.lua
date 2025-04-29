@@ -1,3 +1,10 @@
+local function find_venv(start_path)
+	local venv_path = start_path .. "/venv"
+	if vim.fn.isdirectory(venv_path) == 1 then
+		return venv_path
+	end
+	return nil
+end
 return {
 	{
 		"neovim/nvim-lspconfig",
@@ -14,10 +21,37 @@ return {
 
 			local capabilities = cmp_nvim_lsp.default_capabilities()
 
+			local pyright_restarted = false
+
 			mason_lspconfig.setup_handlers({
 				function(server_name)
 					lspconfig[server_name].setup({
 						capabilities = capabilities,
+					})
+				end,
+				["pyright"] = function()
+					lspconfig["pyright"].setup({
+						capabilities = capabilities,
+						on_init = function(client)
+							if not pyright_restarted then
+								local cwd = vim.fn.getcwd()
+								local venv_path = find_venv(cwd)
+								if venv_path then
+									print("Venv folder found: " .. venv_path)
+									vim.env.VIRTUAL_ENV = venv_path
+									vim.env.PATH = venv_path .. "/bin:" .. vim.env.PATH
+
+									pyright_restarted = true
+
+									vim.schedule(function()
+										vim.cmd("LspRestart pyright")
+										print("Pyright restarted with new venv settings")
+									end)
+								else
+									print("No venv folder found in the current directory: " .. cwd)
+								end
+							end
+						end,
 					})
 				end,
 				["lua_ls"] = function()

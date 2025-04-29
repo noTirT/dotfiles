@@ -20,6 +20,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Shell integrations
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
+source <(kubectl completion zsh)
 
 # Add in Powerlevel10k (visual of the actual input part of the terminal)
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -65,4 +66,20 @@ alias vim=nvim
 alias ls="eza --all --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias vpn="/opt/cisco/anyconnect/bin/vpn"
 BAT_THEME="Catppuccin Macchiato"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/tom/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/tom/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/tom/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/tom/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

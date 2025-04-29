@@ -21,6 +21,20 @@ return {
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("telescope").setup({
+				defaults = {
+					file_ignore_patterns = {
+						"node_modules",
+						"venv",
+						"__pycache__",
+						"__init__.py",
+						"build",
+					},
+				},
+				pickers = {},
+			})
+		end,
 	},
 	{
 		"catppuccin/nvim",
